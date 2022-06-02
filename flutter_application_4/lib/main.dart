@@ -30,7 +30,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    entries.sort();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
