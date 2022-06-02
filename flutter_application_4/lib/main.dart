@@ -72,4 +72,11 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  delete(val) async {
+    prefs = await SharedPreferences.getInstance();
+    var favoriteList = prefs.getStringList('historyValue') ?? [];
+    favoriteList.removeWhere((item) => item == val);
+    setState(() {});
+  }
 }
