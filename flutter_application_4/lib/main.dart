@@ -46,9 +46,7 @@ class _MyAppState extends State<MyApp> {
                   return ListTile(
                     title: Text('${data[index]}'),
                     onLongPress: () {
-                      setState(() {
-                        data.removeAt(index);
-                      });
+                      delete(index);
                     },
                     trailing: Icon(Icons.remove_circle_outline),
                   );
